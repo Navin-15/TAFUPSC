@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Topbar from "./components/Topbar";
 import Slider from "./Slider/Slider";
-import FreeResources from './free/Freeresources';
+import FreeResource from './free/FreeResource';
 
 import './App.css'
 
@@ -12,7 +12,7 @@ function App() {
     <>
     <Topbar/>
     <Slider/>
-    <FreeResources/>
+    <FreeResource/>
     </>
   )
 }
