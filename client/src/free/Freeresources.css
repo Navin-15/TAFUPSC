@@ -1,0 +1,62 @@
+.free-resources-container {
+  padding: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.resources-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #1f1f1f;
+}
+
+.resources-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.resource-card {
+  flex: 1 1 180px;
+  min-width: 180px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.icon-wrapper {
+  font-size: 32px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.resource-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f1f1f;
+}
+
+.resource-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
