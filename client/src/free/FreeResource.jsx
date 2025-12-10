@@ -1,5 +1,5 @@
 import React from "react";
-import "./FreeResources.css";
+import "./FreeResource.css";
 // import { FaBook } from "react-icons/fa";
 // import { GiLaurelsTrophy } from "react-icons/gi";
 // import { BsJournalBook } from "react-icons/bs";
