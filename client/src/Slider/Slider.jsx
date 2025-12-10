@@ -50,67 +50,169 @@
 
 // export default Slider;
 
+//ok slider
 
+// import React, { useRef, useState, useEffect } from "react";
+// import "./Slider.css";
+
+// const images = [
+//     "/carosel-img-7.jpg",
+//   "/carosel-img-8.avif",
+// //   "/carosel-img-2.webp",
+// //   "/carosel-img-3.webp",
+// //   "/carosel-img-4.webp",
+// //   "/carosel-img-5.jpg",
+// //   "/carosel-img-6.jpg",
+// ];
+
+// const Slider = () => {
+//   const sliderRef = useRef(null);
+//   const [index, setIndex] = useState(0);
+
+//   const goToIndex = (i) => {
+//     const width = sliderRef.current.clientWidth;
+//     sliderRef.current.scrollTo({
+//       left: width * i,
+//       behavior: "smooth",
+//     });
+//   };
+
+//   const scrollRight = () => {
+//     const nextIndex = (index + 1) % images.length; // loop to start
+//     setIndex(nextIndex);
+//     goToIndex(nextIndex);
+//   };
+
+//   const scrollLeft = () => {
+//     const prevIndex = (index - 1 + images.length) % images.length; // loop to last
+//     setIndex(prevIndex);
+//     goToIndex(prevIndex);
+//   };
+
+//   // update scroll when user manually scrolls (optional)
+//   useEffect(() => {
+//     const slider = sliderRef.current;
+
+//     const handleScroll = () => {
+//       const width = slider.clientWidth;
+//       const newIndex = Math.round(slider.scrollLeft / width);
+//       setIndex(newIndex);
+//     };
+
+//     slider.addEventListener("scroll", handleScroll);
+//     return () => slider.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <div className="slider-container">
+//       <button className="slider-btn left" onClick={scrollLeft}>❮</button>
+
+//       <div className="image-slider" ref={sliderRef}>
+//         {images.map((src, index) => (
+//           <div className="slide-item" key={index}>
+//             <img src={src} alt={`Slide ${index}`} />
+//           </div>
+//         ))}
+//       </div>
+
+//       <button className="slider-btn right" onClick={scrollRight}>❯</button>
+//     </div>
+//   );
+// };
+
+// export default Slider;
 
 import React, { useRef, useState, useEffect } from "react";
 import "./Slider.css";
 
 const images = [
-    "/carosel-img-7.jpg",
+  "/carosel-img-7.jpg",
   "/carosel-img-8.avif",
-//   "/carosel-img-2.webp",
-//   "/carosel-img-3.webp",
-//   "/carosel-img-4.webp",
-//   "/carosel-img-5.jpg",
-//   "/carosel-img-6.jpg",
 ];
 
 const Slider = () => {
   const sliderRef = useRef(null);
+  const containerRef = useRef(null);
+
   const [index, setIndex] = useState(0);
+  const [slideWidth, setSlideWidth] = useState(0);
+  const [slideHeight, setSlideHeight] = useState(350);
+
+  // Dynamically adjust width + height on all screen sizes
+  const updateSizes = () => {
+    if (containerRef.current) {
+      const width = containerRef.current.offsetWidth;
+
+      // Responsive height logic
+      let height = 350; // default
+
+      if (width <= 480) height = 180;       // mobile
+      else if (width <= 768) height = 250;  // small tablets
+      else if (width <= 1024) height = 300; // big tablets / small laptop
+      else height = 350;                    // desktop
+
+      setSlideWidth(width);
+      setSlideHeight(height);
+    }
+  };
+
+  useEffect(() => {
+    updateSizes();
+    window.addEventListener("resize", updateSizes);
+    return () => window.removeEventListener("resize", updateSizes);
+  }, []);
 
   const goToIndex = (i) => {
-    const width = sliderRef.current.clientWidth;
     sliderRef.current.scrollTo({
-      left: width * i,
+      left: slideWidth * i,
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
-    const nextIndex = (index + 1) % images.length; // loop to start
+    const nextIndex = (index + 1) % images.length;
     setIndex(nextIndex);
     goToIndex(nextIndex);
   };
 
   const scrollLeft = () => {
-    const prevIndex = (index - 1 + images.length) % images.length; // loop to last
+    const prevIndex = (index - 1 + images.length) % images.length;
     setIndex(prevIndex);
     goToIndex(prevIndex);
   };
 
-  // update scroll when user manually scrolls (optional)
+  // Track manual scroll
   useEffect(() => {
     const slider = sliderRef.current;
 
     const handleScroll = () => {
-      const width = slider.clientWidth;
-      const newIndex = Math.round(slider.scrollLeft / width);
+      const newIndex = Math.round(slider.scrollLeft / slideWidth);
       setIndex(newIndex);
     };
 
     slider.addEventListener("scroll", handleScroll);
     return () => slider.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [slideWidth]);
 
   return (
-    <div className="slider-container">
+    <div className="slider-container" ref={containerRef}>
       <button className="slider-btn left" onClick={scrollLeft}>❮</button>
 
       <div className="image-slider" ref={sliderRef}>
-        {images.map((src, index) => (
-          <div className="slide-item" key={index}>
-            <img src={src} alt={`Slide ${index}`} />
+        {images.map((src, i) => (
+          <div
+            className="slide-item"
+            key={i}
+            style={{
+              minWidth: `${slideWidth}px`,
+              height: `${slideHeight}px`
+            }}
+          >
+            <img
+              src={src}
+              alt={`Slide ${i}`}
+              style={{ height: `${slideHeight}px` }}
+            />
           </div>
         ))}
       </div>
@@ -121,94 +223,3 @@ const Slider = () => {
 };
 
 export default Slider;
-
-
-// import React, { useRef, useState, useEffect } from "react";
-// import "./Slider.css";
-
-// const originalImages = [
-//   "/carosel-img-1.webp",
-//   "/carosel-img-2.webp",
-//   "/carosel-img-3.webp",
-//   "/carosel-img-4.webp",
-//   "/carosel-img-5.jpg",
-//   "/carosel-img-6.jpg",
-// ];
-
-// const Slider = () => {
-//   const sliderRef = useRef(null);
-
-//   // Duplicate first + last image to create seamless looping
-//   const images = [
-//     originalImages[originalImages.length - 1], // last clone
-//     ...originalImages,
-//     originalImages[0], // first clone
-//   ];
-
-//   const [index, setIndex] = useState(1); // Start from first REAL image
-
-//   // Move slider to current index
-//   const goToIndex = (i, smooth = true) => {
-//     const width = sliderRef.current.clientWidth;
-//     sliderRef.current.scrollTo({
-//       left: width * i,
-//       behavior: smooth ? "smooth" : "instant",
-//     });
-//   };
-
-//   const nextSlide = () => {
-//     setIndex((prev) => prev + 1);
-//   };
-
-//   const prevSlide = () => {
-//     setIndex((prev) => prev - 1);
-//   };
-
-//   // Watch index and adjust for infinite loop
-//   useEffect(() => {
-//     if (!sliderRef.current) return;
-
-//     goToIndex(index);
-
-//     // If moved to the last clone (right)
-//     if (index === images.length - 1) {
-//       setTimeout(() => {
-//         setIndex(1); // jump to real 1st
-//         goToIndex(1, false);
-//       }, 300);
-//     }
-
-//     // If moved to the first clone (left)
-//     if (index === 0) {
-//       setTimeout(() => {
-//         setIndex(originalImages.length); // jump to real last
-//         goToIndex(originalImages.length, false);
-//       }, 300);
-//     }
-//   }, [index]);
-
-//   useEffect(() => {
-//     // On load → go to index 1 (first real image)
-//     goToIndex(1, false);
-//   }, []);
-
-//   return (
-//     <div className="slider-container">
-
-//       <button className="slider-btn left" onClick={prevSlide}>❮</button>
-
-//       <div className="image-slider" ref={sliderRef}>
-//         {images.map((src, i) => (
-//           <div className="slide-item" key={i}>
-//             <img src={src} alt={`Slide ${i}`} />
-//           </div>
-//         ))}
-//       </div>
-
-//       <button className="slider-btn right" onClick={nextSlide}>❯</button>
-
-//     </div>
-//   );
-// };
-
-// export default Slider;

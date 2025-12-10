@@ -33,7 +33,7 @@
 /* DROPDOWN MENU */
 .dropdown-menu-custom {
   position: absolute;
-  top: 35px;
+  /* top: 35px; */
   left: 0;
   width: 220px;
   background: #ffffff;
@@ -131,4 +131,77 @@
 
 .sub-item-custom:hover {
   background: #f5f5f5;
+}
+
+/* MOBILE MENU */
+@media (max-width: 992px) {
+  .nav-section {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    display: none;
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+
+  .mobile-menu-open {
+    display: flex !important;
+  }
+
+  .custom-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu-custom {
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .sub-menu-custom {
+    position: relative;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+  }
+}
+
+/* MOBILE MENU */
+.mobile-menu-closed {
+  display: none;
+}
+
+.mobile-menu-open {
+  display: block;
+}
+
+/* MOBILE SUBMENU */
+.submenu-hide {
+  display: none !important;
+}
+
+.submenu-show {
+  display: block !important;
+}
+
+/* Enable clicking instead of hover on mobile */
+@media (max-width: 992px) {
+  .custom-dropdown .dropdown-menu-custom {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .mobile-click {
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+  }
 }
