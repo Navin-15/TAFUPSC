@@ -1,0 +1,114 @@
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4a0905;
+}
+
+.batch-tabs .tab {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  cursor: pointer;
+  color: #555;
+}
+
+.batch-tabs .active {
+  color: #6c63ff;
+  border-bottom: 2px solid #6c63ff;
+}
+
+.batch-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+}
+
+.batch-card:hover {
+  transform: translateY(-5px);
+}
+
+.online-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #4f46e5;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.lang-tag {
+  background: #eee;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.desc {
+  color: #777;
+  font-size: 14px;
+}
+
+.dates {
+  font-size: 13px;
+  color: #444;
+}
+
+.price-box {
+  margin-top: 10px;
+}
+
+.new-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.old-price {
+  margin-left: 10px;
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
+}
+
+.explore-btn {
+  background: #f3f4f6;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.buy-btn {
+  background: #6c63ff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.view-all-btn {
+  background: #6c63ff;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
