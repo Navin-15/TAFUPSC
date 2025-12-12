@@ -26,7 +26,7 @@ const batches = [
   {
     id: 2,
     title: "BATCH - 2",
-    lang: "Hindi",
+    lang: "English",
     price: 9999,
     oldPrice: 19999,
     start: "28 July 2025",

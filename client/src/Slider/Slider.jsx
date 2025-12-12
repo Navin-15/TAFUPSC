@@ -126,8 +126,8 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Slider.css";
 
 const images = [
-  "/webbanner.jpg",
-  "/carosel-img-7.jpg",
+  "/carosel-img-1.jpg",
+  "/carosel-img-2.jpg",
 ];
 
 const Slider = () => {
