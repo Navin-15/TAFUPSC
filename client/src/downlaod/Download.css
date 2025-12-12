@@ -1,0 +1,40 @@
+.syllabus-btn {
+  /* background: linear-gradient(90deg, #ff5a5a, #ff4343); */
+  background: #592504;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.syllabus-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 67, 67, 0.35);
+}
+
+/* White circular icon container */
+.icon-wrapper {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+/* Icon styling */
+.download-icon {
+  color: #000;
+  font-weight: bold;
+}
+

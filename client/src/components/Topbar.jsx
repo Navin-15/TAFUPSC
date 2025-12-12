@@ -432,7 +432,7 @@ const Topbar = () => {
       {/* LEFT: LOGO */}
       <div className="d-flex align-items-center gap-3">
         <img src={logoImage} alt="logo" className="logo-img" />
-        <span className="fw-bold">TAF IAS ACADEMY</span>
+        <span className="fw-bold TAF">TAF IAS ACADEMY</span>
       </div>
 
       {/* HAMBURGER BUTTON (Mobile Only) */}

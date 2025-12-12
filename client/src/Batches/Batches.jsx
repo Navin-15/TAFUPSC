@@ -9,16 +9,19 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import OnlineTag from "../assets/onlineTag.webp";
+
+
 const batches = [
   {
     id: 1,
     title: "BATCH - 1",
-    lang: "Hinglish",
+    lang: "English",
     price: 9999,
     oldPrice: 19999,
     start: "28 July 2025",
     end: "30 September 2026",
-    image: "/images/batch1.png",
+    // image: "/src/assets/card-img-1.png",
   },
   {
     id: 2,
@@ -28,7 +31,7 @@ const batches = [
     oldPrice: 19999,
     start: "28 July 2025",
     end: "30 September 2026",
-    image: "/images/batch2.png",
+    // image: "/src/assets/card-img-1.png",
   },
   {
     id: 3,
@@ -38,7 +41,7 @@ const batches = [
     oldPrice: 9999,
     start: "30 May 2025",
     end: "30 September 2025",
-    image: "/images/batch3.png",
+    // image: "/src/assets/card-img-1.png",
   },
   {
     id: 4,
@@ -48,7 +51,7 @@ const batches = [
     oldPrice: 9999,
     start: "30 May 2025",
     end: "30 September 2025",
-    image: "/images/batch3.png",
+    // image: "/src/assets/card-img-1.png",
   },
 ];
 
@@ -59,8 +62,8 @@ const Batches = () => {
 
       {/* Category Tabs */}
       <div className="batch-tabs d-flex justify-content-center gap-4 mt-3">
-        <button className="tab">GS Foundation</button>
-        <button className="tab active">Repeaters</button>
+        <button className="tab active">GS Foundation</button>
+        <button className="tab">Repeaters</button>
         <button className="tab">Test Series</button>
       </div>
 
@@ -85,11 +88,13 @@ const Batches = () => {
           {batches.map((batch) => (
             <SwiperSlide key={batch.id}>
               <div className="batch-card shadow-sm">
-                <span className="online-tag">ONLINE</span>
+                <div className="online-tag">
+                  <img src={OnlineTag} alt="logo" className="online-img" />
+                </div>
 
-                <img src={batch.image} className="card-img-top" alt="" />
-
-                <div className="card-body">
+                    <img src={batch.image} className="card-img-top" alt="" />
+                  
+                <div className="card-body p-3">
                   <h5 className="card-title">{batch.title}</h5>
 
                   <span className="lang-tag">{batch.lang}</span>
