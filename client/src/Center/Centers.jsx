@@ -8,47 +8,47 @@ const centres = [
   },
   {
     name: "TAF - COIMBATORE",
-    img: "/src/assets/explore-img-2.webp",
+    img: "/assets/explore-img-2.webp",
   },
   {
     name: "TAF - TIRUPPUR",
-    img: "/src/assets/explore-img-3.jpg",
+    img: "/assets/explore-img-3.jpg",
   },
   {
     name: "TAF - ERODE",
-    img: "/src/assets/explore-img-4.webp",
+    img: "/assets/explore-img-4.webp",
   },
   {
     name: "TAF - SALEM",
-    img: "/src/assets/explore-img-5.avif",
+    img: "/assets/explore-img-5.avif",
   },
   {
     name: "TAF - MADURAI",
-    img: "/src/assets/explore-img-6.avif",
+    img: "/assets/explore-img-6.avif",
   },
   {
     name: "TAF - TRICHY",
-    img: "/src/assets/explore-img-7.jpg",
+    img: "/assets/explore-img-7.jpg",
   },
   {
     name: "TAF - CUDDALORE",
-    img: "/src/assets/explore-img-8.png",
+    img: "/assets/explore-img-8.png",
   },
   {
     name: "TAF - VILLUPURAM",
-    img: "/src/assets/explore-img-9.png",
+    img: "/assets/explore-img-9.png",
   },
   {
     name: "TAF - TIRUNELVELI",
-    img: "/src/assets/explore-img-10.png",
+    img: "/assets/explore-img-10.png",
   },
   {
     name: "TAF - KOVILPATTI",
-    img: "/src/assets/explore-img-11.png",
+    img: "/assets/explore-img-11.png",
   },
   {
     name: "TAF - THANJAVUR",
-    img: "/src/assets/explore-img-12.png",
+    img: "/assets/explore-img-12.png",
   },
 ];
 
