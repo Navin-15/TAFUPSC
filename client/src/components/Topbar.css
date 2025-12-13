@@ -17,15 +17,15 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  color: #592504;
+  color: #4a0905;
   transition: color 0.2s ease;
 }
 
 .nav-link-text:hover {
-  color: #592504;
+  color: #4a0905;
 }
 .TAF {
-  color: #592504;
+  color: #4a0905;
 }
 
 /* CUSTOM DROPDOWN WRAPPER */
@@ -59,7 +59,7 @@
 
 /* DROPDOWN ITEM */
 .dropdown-item-custom {
-  color: #592504;
+  color: #4a0905;
   list-style: none;
   padding: 12px 18px;
   font-size: 15px;
@@ -72,13 +72,13 @@
 
 .dropdown-item-custom:hover {
   background: #ece8ff;
-  color: #592504;
+  color: #4a0905;
   transform: translateX(6px);
 }
 
 /* LOGIN BUTTON */
 .login-btn {
-  background: #592504;
+  background: #4a0905;
   color: #fff;
   border: none;
   padding: 12px 26px;

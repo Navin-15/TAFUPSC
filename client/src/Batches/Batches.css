@@ -2,7 +2,7 @@
 .section-title {
   font-size: 32px;
   font-weight: 700;
-  color: #592504;
+  color: #4a0905;
 }
 
 .batch-tabs .tab {
@@ -62,14 +62,14 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
-  background-color: #592504;
+  background-color: #4a0905;
   border-start-end-radius: 10px;
 }
 
 .card-title {
   font-weight: 700;
   font-size: 18px;
-  color: #592504 !important;
+  color: #4a0905 !important;
 }
 .card-body {
   background-color: #c2c2c2;
@@ -95,7 +95,7 @@
 .new-price {
   font-size: 22px;
   font-weight: 700;
-  color: #592504;
+  color: #4a0905;
 }
 
 .old-price {
@@ -107,7 +107,7 @@
 
 .explore-btn {
   background: #f3f4f6;
-  color: #592504;
+  color: #4a0905;
   border: none;
   padding: 8px 20px;
   border-radius: 8px;
@@ -115,7 +115,7 @@
 }
 
 .buy-btn {
-  background: #592504;
+  background: #4a0905;
   border: none;
   padding: 8px 20px;
   border-radius: 8px;
@@ -124,7 +124,7 @@
 }
 
 .view-all-btn {
-  background: #592504;
+  background: #4a0905;
   color: #fff;
   padding: 10px 25px;
   border: none;

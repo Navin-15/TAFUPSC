@@ -466,36 +466,52 @@ const Topbar = () => {
           >
             <li className="dropdown-item-custom sub-parent">
               UPSC ▸
-              <ul className="sub-menu-custom">
+              {/* <ul className="sub-menu-custom">
                 <li className="sub-item-custom">Foundation Batch</li>
                 <li className="sub-item-custom">Prelims Special</li>
-              </ul>
+              </ul> */}
             </li>
 
             <li className="dropdown-item-custom sub-parent">
               TNPSC ▸
-              <ul className="sub-menu-custom">
+              {/* <ul className="sub-menu-custom">
                 <li className="sub-item-custom">Group 1</li>
                 <li className="sub-item-custom">Group 2</li>
                 <li className="sub-item-custom">Group 4</li>
-              </ul>
+              </ul> */}
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              TNUSRB ▸
+              {/* <ul className="sub-menu-custom">
+                <li className="sub-item-custom">Group 1</li>
+                <li className="sub-item-custom">Group 2</li>
+                <li className="sub-item-custom">Group 4</li>
+              </ul> */}
             </li>
 
             <li className="dropdown-item-custom sub-parent">
-              SSC RRB ▸
-              <ul className="sub-menu-custom">
+              SSC ▸
+              {/* <ul className="sub-menu-custom">
                 <li className="sub-item-custom">X</li>
                 <li className="sub-item-custom">Y</li>
                 <li className="sub-item-custom">Z</li>
-              </ul>
+              </ul> */}
+            </li>
+
+            <li className="dropdown-item-custom sub-parent">
+              RRB ▸
+              {/* <ul className="sub-menu-custom">
+                <li className="sub-item-custom">PG TRB</li>
+                <li className="sub-item-custom">TET</li>
+              </ul> */}
             </li>
 
             <li className="dropdown-item-custom sub-parent">
               TRB ▸
-              <ul className="sub-menu-custom">
+              {/* <ul className="sub-menu-custom">
                 <li className="sub-item-custom">PG TRB</li>
                 <li className="sub-item-custom">TET</li>
-              </ul>
+              </ul> */}
             </li>
           </ul>
         </div>
@@ -544,7 +560,7 @@ const Topbar = () => {
             className="nav-link-text mobile-click"
             onClick={() => toggleSub("schedule")}
           >
-            SCHEDULE ▾
+            OFFLINE CENTERS ▾
           </span>
 
           <ul
@@ -553,27 +569,58 @@ const Topbar = () => {
             }`}
           >
             <li className="dropdown-item-custom sub-parent">
-              Regular ▸
-              <ul className="sub-menu-custom">
+              TENKASI ▸
+              {/* <ul className="sub-menu-custom">
                 <li className="sub-item-custom">UPSC - EETHAL</li>
                 <li className="sub-item-custom">TNPSC - FREEDOM</li>
-              </ul>
+              </ul> */}
             </li>
+
             <li className="dropdown-item-custom sub-parent">
-              Test Batch ▸
-              <ul className="sub-menu-custom">
+              COIMBATORE ▸
+              {/* <ul className="sub-menu-custom">
                 <li className="sub-item-custom">Grp 1 - Saadhanai</li>
                 <li className="sub-item-custom">Grp 2 Mains - Gratitude</li>
                 <li className="sub-item-custom">Grp 2A Mains - Everest</li>
                 <li className="sub-item-custom">Grp 4 - Alaikadal</li>
-              </ul>
+              </ul> */}
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              TIRUPPUR ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              ERODE ▸
+            </li>
+             <li className="dropdown-item-custom sub-parent">
+              SALEM ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              MADURAI ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              TRICHY ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              CUDDALORE ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              VILLUPURAM ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              TIRUNELVELI ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              KOVILPATTI ▸
+            </li>
+            <li className="dropdown-item-custom sub-parent">
+              THANJAVUR ▸
             </li>
           </ul>
         </div>
       </div>
 
       {/* LOGIN BUTTON (Desktop Only) */}
-      <button className="login-btn d-none d-lg-block">TAKE YOUR TEST</button>
+      <button className="login-btn d-none d-lg-block">LOGIN/SIGNUP</button>
     </div>
   );
 };
