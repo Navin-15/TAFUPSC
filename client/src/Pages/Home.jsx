@@ -7,7 +7,7 @@ import Centers from "../Center/Centers";
 const Home = () => {
   return (
     <>
-      <Topbar />
+      <Topbar/>
       <Slider />
       <Batches />
       <Centers />
