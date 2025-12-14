@@ -419,7 +419,7 @@ import React, { useState } from "react";
 import "./TopBar.css";
 import logoImage from "../assets/taf-logo.jpg";
 
-const Topbar = () => {
+const TopBar = () => {
   const [menuOpen, setMenuOpen] = useState(false); // mobile main menu toggle
   const [openSubMenu, setOpenSubMenu] = useState(null); // open submenu on mobile
 
@@ -625,4 +625,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar;
+export default TopBar;
