@@ -417,7 +417,7 @@
 
 import React, { useState } from "react";
 import "./Topbar.css";
-import logoImage from "../assets/taf-logo.jpg";
+import logoImage from "../../assets/taf-logo.jpg";
 
 const Topbar = () => {
   const [menuOpen, setMenuOpen] = useState(false); // mobile main menu toggle
