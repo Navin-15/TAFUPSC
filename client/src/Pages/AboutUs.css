@@ -1,4 +1,4 @@
-.about-page {
+/* .about-page {
   background: linear-gradient(to right, #e3f2fd, #fce4ec);
   min-height: 100vh;
   padding: 60px 0;
@@ -40,4 +40,115 @@
 .info-box h5 {
   font-weight: 600;
   margin-bottom: 10px;
+} */
+
+
+/* Title */
+.syllabus-title {
+  font-size: 26px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-bar {
+  width: 4px;
+  height: 28px;
+  background: #6f6af8;
+}
+
+/* 🔥 Horizontal Tabs Scroll */
+.tabs-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabs-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.tabs-scroll {
+  flex-wrap: nowrap;
+}
+
+.tab-btn {
+  white-space: nowrap;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Left Menu */
+.left-menu {
+  border-right: 1px solid #ddd;
+}
+
+.left-menu-item {
+  padding: 15px 16px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #555;
+}
+
+.left-menu-item.active {
+  color: #6f6af8;
+  background: #f7f7ff;
+  border-left: 4px solid #6f6af8;
+}
+
+/* Right Content */
+.right-content {
+  padding: 15px;
+}
+
+.content-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .left-menu {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .left-menu-item {
+    border-left: none !important;
+  }
+
+  .syllabus-title {
+    font-size: 22px;
+  }
+}
+
+
+
+/* 🔥 Prevent layout jump */
+.right-content {
+  min-height: 300px; /* stabilizes height */
+}
+
+/* 🔥 Smooth fade instead of flash */
+.fade-content {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
