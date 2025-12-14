@@ -62,7 +62,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AboutUs.css";
-import TopBar from "../components/TopBar";
+import Topbar from "../components/Topbar/TopBar";
 
 const syllabusData = {
   About: {
@@ -94,7 +94,7 @@ const syllabusData = {
 
 };
 
-const Syllabus = () => {
+const AboutUs = () => {
   const tabs = useMemo(() => Object.keys(syllabusData), []);
 
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -115,7 +115,7 @@ const Syllabus = () => {
 
   return (
     <>
-    <TopBar/>
+    <Topbar/>
     <div className="container my-4 syllabus-wrapper">
       {/* Title */}
       <h2 className="syllabus-title mb-3">
@@ -173,4 +173,4 @@ const Syllabus = () => {
   );
 };
 
-export default Syllabus;
+export default AboutUs;

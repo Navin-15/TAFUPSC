@@ -416,10 +416,10 @@
 // Responsive TopBar 
 
 import React, { useState } from "react";
-import "./TopBar.css";
+import "./Topbar.css";
 import logoImage from "../assets/taf-logo.jpg";
 
-const TopBar = () => {
+const Topbar = () => {
   const [menuOpen, setMenuOpen] = useState(false); // mobile main menu toggle
   const [openSubMenu, setOpenSubMenu] = useState(null); // open submenu on mobile
 
@@ -625,4 +625,4 @@ const TopBar = () => {
   );
 };
 
-export default TopBar;
+export default Topbar;

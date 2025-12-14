@@ -1,13 +1,13 @@
-import TopBar from "../components/TopBar";
-import Slider from "../Slider/Slider";
+import Slider from "../slider/Slider";
 import FreeResource from "../free/FreeResource";
-import Batches from "../Batches/Batches";
-import Centers from "../Center/Centers";
+import Batches from "../batches/Batches";
+import Centers from "../center/Centers";
+import Topbar from "../components/Topbar/TopBar";
 
 const Home = () => {
   return (
     <>
-      <TopBar/>
+      <Topbar/>
       <Slider />
       <Batches />
       <Centers />
