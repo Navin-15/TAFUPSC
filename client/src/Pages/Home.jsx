@@ -9,9 +9,9 @@ const Home = () => {
     <>
       <Topbar/>
       <Slider/>
+      <Free/>
       <Batches/>
       <Center/>
-      <Free/>
     
     </>
   );
