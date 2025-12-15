@@ -1,4 +1,4 @@
-import Slider from '../slider/Slider'
+import Slider from '../Slider/Slider'
 import Batches from '../batches/Batches'
 import Center from '../center/Centers'
 import Free from '../free/FreeResource'

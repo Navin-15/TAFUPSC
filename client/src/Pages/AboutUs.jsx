@@ -62,7 +62,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AboutUs.css";
-import Topbar from "../components/Topbar/TopBar";
+import Topbar from "../components/Topbar/Topbar";
 
 const syllabusData = {
   About: {
