@@ -418,8 +418,13 @@
 import React, { useState } from "react";
 import "./Topbar.css";
 import logoImage from "../../assets/taf-logo.jpg";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Topbar = () => {
+  const navigate = useNavigate();
+
   const [menuOpen, setMenuOpen] = useState(false); // mobile main menu toggle
   const [openSubMenu, setOpenSubMenu] = useState(null); // open submenu on mobile
 
@@ -430,7 +435,7 @@ const Topbar = () => {
   return (
     <div className="topbar shadow-sm">
       {/* LEFT: LOGO */}
-      <div className="d-flex align-items-center gap-3">
+      <div className="d-flex align-items-center gap-3" style={{ cursor: "pointer" }} onClick={() => navigate("/")} >
         <img src={logoImage} alt="logo" className="logo-img" />
         <span className="fw-bold TAF">TAF IAS ACADEMY</span>
       </div>

@@ -92,6 +92,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: 500;
   color: #555;
 }
@@ -102,9 +103,15 @@
   border-left: 4px solid #6f6af8;
 }
 
+.arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
 /* Right Content */
 .right-content {
   padding: 15px;
+  min-height: 300px;
 }
 
 .content-card {
@@ -112,6 +119,11 @@
   border-radius: 6px;
   padding: 14px 16px;
   margin-bottom: 12px;
+}
+
+/* Smooth fade */
+.fade-content {
+  animation: fadeIn 0.25s ease-in-out;
 }
 
 /* Mobile */
@@ -127,6 +139,11 @@
 
   .syllabus-title {
     font-size: 22px;
+  }
+
+  /* 🔥 ROTATE ARROW DOWN FOR ACTIVE ITEM */
+  .left-menu-item.active .arrow {
+    transform: rotate(90deg);
   }
 }
 
@@ -151,4 +168,15 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* new css */
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table ul li {
+  margin-bottom: 6px;
 }
