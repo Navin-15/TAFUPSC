@@ -1,0 +1,38 @@
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.form-card {
+  border-radius: 16px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.form-card h4 {
+  font-weight: 700;
+  color: #4a0905;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control {
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #4a0905;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #3a0704;
+}

@@ -559,7 +559,7 @@ const Topbar = () => {
           </ul>
         </div>
 
-        {/* ========================== SCHEDULE ========================== */}
+        {/* ========================== OFFLINE CENTERS ========================== */}
         <div className="custom-dropdown">
           <span
             className="nav-link-text mobile-click"
