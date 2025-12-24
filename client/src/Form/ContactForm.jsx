@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
+import axios from "axios";
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +12,7 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,14 +24,12 @@ const ContactForm = () => {
   const validate = () => {
     let newErrors = {};
 
-    // Name validation
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     } else if (formData.name.length < 3) {
       newErrors.name = "Name must be at least 3 characters";
     }
 
-    // Email validation
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (
@@ -36,24 +38,36 @@ const ContactForm = () => {
       newErrors.email = "Enter a valid email address";
     }
 
-    // Mobile validation
     if (!formData.mobile.trim()) {
       newErrors.mobile = "Mobile number is required";
     } else if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
-      newErrors.mobile = "Enter a valid 10-digit mobile number";
+      newErrors.mobile = "Enter valid 10-digit mobile number";
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validate()) {
+    if (!validate()) return;
+
+    try {
+      setLoading(true);
+
+      await axios.post(`${API_URL}/api/customers`, formData);
+
       alert("Submitted Successfully ✅");
+
       setFormData({ name: "", email: "", mobile: "" });
       setErrors({});
+    } catch (error) {
+      alert(
+        error.response?.data?.message || "Something went wrong"
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -76,16 +90,17 @@ const ContactForm = () => {
                   }`}
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Enter your name"
                 />
                 {errors.name && (
-                  <div className="invalid-feedback">{errors.name}</div>
+                  <div className="invalid-feedback">
+                    {errors.name}
+                  </div>
                 )}
               </div>
 
               {/* Email */}
               <div className="mb-3">
-                <label className="form-label">Email Address</label>
+                <label className="form-label">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -94,16 +109,17 @@ const ContactForm = () => {
                   }`}
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Enter your email"
                 />
                 {errors.email && (
-                  <div className="invalid-feedback">{errors.email}</div>
+                  <div className="invalid-feedback">
+                    {errors.email}
+                  </div>
                 )}
               </div>
 
               {/* Mobile */}
               <div className="mb-4">
-                <label className="form-label">Mobile Number</label>
+                <label className="form-label">Mobile</label>
                 <input
                   type="tel"
                   name="mobile"
@@ -112,16 +128,20 @@ const ContactForm = () => {
                   }`}
                   value={formData.mobile}
                   onChange={handleChange}
-                  placeholder="Enter mobile number"
                 />
                 {errors.mobile && (
-                  <div className="invalid-feedback">{errors.mobile}</div>
+                  <div className="invalid-feedback">
+                    {errors.mobile}
+                  </div>
                 )}
               </div>
 
-              {/* Submit */}
-              <button type="submit" className="btn btn-primary w-100">
-                Submit
+              <button
+                type="submit"
+                className="btn btn-primary w-100"
+                disabled={loading}
+              >
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </form>
           </div>
@@ -132,3 +152,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
