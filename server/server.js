@@ -6,7 +6,13 @@ const customerRoutes = require("./routes/customerRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: [
+      "http://localhost:5173",
+      "https://tafupsc.netlify.app/"
+    ],
+    methods: ["GET", "POST"],
+  }));
 app.use(express.json());
 
 // MongoDB connection
