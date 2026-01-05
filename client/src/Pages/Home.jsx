@@ -4,7 +4,6 @@ import Center from '../Center/Centers'
 import Free from '../free/FreeResource'
 import Topbar from '../components/Topbar/Topbar'
 import ContactForm from '../Form/ContactForm'
-import OtpLogin from '../components/Login/OtpLogin'
 const Home = () => {
   return (
     <>
@@ -14,7 +13,6 @@ const Home = () => {
       <Batches/>
       <Center/>
       <ContactForm/>
-      <OtpLogin/>
     </>
   );
 };
