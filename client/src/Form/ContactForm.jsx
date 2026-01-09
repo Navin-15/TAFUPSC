@@ -56,7 +56,14 @@ const ContactForm = () => {
     try {
       setLoading(true);
 
-      await axios.post(`${API_URL}/api/customers`, formData);
+      // await axios.post(`${API_URL}/api/customers`, formData);
+
+      axios.post(`${API_URL}/api/leads`, {
+  name: formData.name,
+  email: formData.email,
+  mobile: formData.mobile,
+});
+
 
       alert("Submitted Successfully ✅");
 
